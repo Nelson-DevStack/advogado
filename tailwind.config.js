@@ -10,7 +10,7 @@ module.exports = {
     extend: {
       colors: {
         primaryGray: '#1B2124',
-        accentColor: '#F4A261',
+        accentColor: '#FF9966',
       },
       fontFamily: {
         heading: 'Montserrat, sans-serif',

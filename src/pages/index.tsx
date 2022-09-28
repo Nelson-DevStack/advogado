@@ -3,6 +3,8 @@ import Head from 'next/head';
 import React from 'react';
 
 import Hero from '../components/Hero';
+import Navbar from '../components/Navbar';
+import Text from '../components/UI/Text';
 
 const Home: NextPage = () => {
   return (
@@ -13,6 +15,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Navbar />
       <main>
         {/* <h1>Home Page</h1> */}
         <Hero />
