@@ -29,7 +29,7 @@ const Hero = () => {
 
   return (
     <section>
-      <Container className="grid lg:grid-cols-2 lg:items-center gap-10 min-h-[70vh] lg:justify-between">
+      <Container className="grid lg:grid-cols-2 lg:items-center gap-10 min-h-[70vh] lg:justify-between py-10">
         <div>
           <div className="max-w-lg flex flex-col">
             {/* Content Area */}

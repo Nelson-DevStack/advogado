@@ -5,7 +5,7 @@ import googleLogo from '../../../public/logos/google.svg';
 import mercadoLogo from '../../../public/logos/mercado_pago.svg';
 import microsoftLogo from '../../../public/logos/microsoft.svg';
 import sonyLogo from '../../../public/logos/sony.svg';
-import twitchLogo from '../../../public/logos/twitch.svg';
+import teslaLogo from '../../../public/logos/tesla.svg';
 import visaLogo from '../../../public/logos/visa.svg';
 import Container from '../UI/Container';
 import Subheading from '../UI/Subheading';
@@ -22,8 +22,8 @@ const ClientSection = () => {
       alt: 'Sony Logo',
     },
     {
-      src: twitchLogo,
-      alt: 'Twitch Logo',
+      src: teslaLogo,
+      alt: 'Tesla Logo',
     },
     {
       src: visaLogo,
