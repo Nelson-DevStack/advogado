@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
 
+import ClientSection from '../components/ClientSection';
 import Hero from '../components/Hero';
 import Navbar from '../components/Navbar';
 import Text from '../components/UI/Text';
@@ -17,8 +18,8 @@ const Home: NextPage = () => {
 
       <Navbar />
       <main>
-        {/* <h1>Home Page</h1> */}
         <Hero />
+        <ClientSection />
       </main>
     </>
   );
