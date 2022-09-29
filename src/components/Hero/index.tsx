@@ -1,6 +1,7 @@
 import Image from 'next/future/image';
 import React, { useEffect, useState } from 'react';
 
+import heroImg from '../../../public/lawyer.jpg';
 import Button from '../UI/Button';
 import Container from '../UI/Container';
 import Heading from '../UI/Heading';
@@ -51,16 +52,15 @@ const Hero = () => {
             </Button>
           </div>
         </div>
-        <div className="flex flex-col items-center lg:items-end">
+        <div className="flex flex-col items-center lg:items-end relative">
           {/* Image Area */}
-          <div className="max-w-sm w-full h-[26rem] md:h-[30rem] relative">
+          <div className="relative top-0">
             <Image
-              src="/lawyer.jpg"
+              src={heroImg}
               className="
-                w-full h-auto mx-auto lg:mr-4 rounded-2xl shadow-2xl
+                w-full h-auto mx-auto lg:mr-4 rounded-2xl shadow-2xl max-w-sm
                 "
               alt="Hero"
-              fill
               style={{
                 transform: `translate(${mousePosition.x / 850}em, ${
                   mousePosition.y / 850
@@ -68,7 +68,7 @@ const Hero = () => {
               }}
             />
 
-            <div className="bg-yellow-300 scale-[10em] w-full h-full relative -z-10 top-4 left-5 lg:left-0 rounded-2xl" />
+            <div className="bg-yellow-300 w-full md:w-[calc(100%_-_30px)] h-full absolute -z-10 rounded-2xl top-4 left-2 md:left-8" />
           </div>
         </div>
       </Container>
