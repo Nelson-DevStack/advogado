@@ -5,7 +5,7 @@ import React from 'react';
 import ClientSection from '../components/ClientSection';
 import Hero from '../components/Hero';
 import Navbar from '../components/Navbar';
-import Text from '../components/UI/Text';
+import SecondHero from '../components/SecondHero';
 
 const Home: NextPage = () => {
   return (
@@ -20,6 +20,7 @@ const Home: NextPage = () => {
       <main>
         <Hero />
         <ClientSection />
+        <SecondHero />
       </main>
     </>
   );

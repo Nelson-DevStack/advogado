@@ -40,7 +40,7 @@ const ClientSection = () => {
   ];
 
   return (
-    <section className="w-full min-h-[50vh] py-16 bg-accentColor/30">
+    <section className="w-full min-h-[50vh] py-24 bg-accentColor/30">
       <Container>
         <div className="">
           <div className="flex flex-col items-center">
