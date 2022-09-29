@@ -5,6 +5,7 @@ import React from 'react';
 import CasesSection from '../components/CasesSection';
 import ClientSection from '../components/ClientSection';
 import ContactSection from '../components/ContactSection';
+import Footer from '../components/Footer';
 import Hero from '../components/Hero';
 import Navbar from '../components/Navbar';
 import SecondHero from '../components/SecondHero';
@@ -25,6 +26,7 @@ const Home: NextPage = () => {
         <SecondHero />
         <CasesSection />
         <ContactSection />
+        <Footer />
       </main>
     </>
   );
