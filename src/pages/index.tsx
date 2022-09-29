@@ -4,6 +4,7 @@ import React from 'react';
 
 import CasesSection from '../components/CasesSection';
 import ClientSection from '../components/ClientSection';
+import ContactSection from '../components/ContactSection';
 import Hero from '../components/Hero';
 import Navbar from '../components/Navbar';
 import SecondHero from '../components/SecondHero';
@@ -23,6 +24,7 @@ const Home: NextPage = () => {
         <ClientSection />
         <SecondHero />
         <CasesSection />
+        <ContactSection />
       </main>
     </>
   );
