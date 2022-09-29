@@ -1,7 +1,8 @@
 import Image from 'next/future/image';
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 
 import heroImg from '../../../public/lawyer.jpg';
+import { ScrollContext } from '../../contexts/scrollObserver';
 import { FComponent } from '../../types/FComponent';
 import Button from '../UI/Button';
 import Container from '../UI/Container';
@@ -9,6 +10,15 @@ import Heading from '../UI/Heading';
 import Text from '../UI/Text';
 
 const Hero: React.FC<FComponent> = ({ id }) => {
+  const refContainer = useRef<HTMLDivElement>(null);
+  const { scrollY } = useContext(ScrollContext);
+  let progress = 0;
+
+  const { current: elementContainer } = refContainer;
+  if (elementContainer) {
+    progress = Math.min(1, scrollY / elementContainer.clientHeight);
+  }
+
   const [mousePosition, setMousePosition] = useState({
     x: 0,
     y: 0,
@@ -30,7 +40,13 @@ const Hero: React.FC<FComponent> = ({ id }) => {
   }, []);
 
   return (
-    <section id={id}>
+    <section
+      id={id}
+      ref={refContainer}
+      style={{
+        transform: `translateY(-${progress * 35}vh)`,
+      }}
+    >
       <Container className="grid lg:grid-cols-2 lg:items-center gap-10 min-h-[70vh] lg:justify-between py-10">
         <div>
           <div className="max-w-lg flex flex-col">

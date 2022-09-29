@@ -29,7 +29,7 @@ const CasesSection: React.FC<FComponent> = ({ id }) => {
   ];
 
   return (
-    <section className="py-24" id={id}>
+    <section className="py-10 md:py-24" id={id}>
       <Container>
         <div>
           <div className="flex items-center justify-center mb-14">

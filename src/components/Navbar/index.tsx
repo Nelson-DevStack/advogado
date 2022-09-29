@@ -67,7 +67,7 @@ const Navbar = () => {
           >
             {navbarLinks.map((link) => (
               <li
-                className="text-base font-medium text-primaryGray font-text"
+                className="text-base font-semibold lg:font-medium text-primaryGray font-text"
                 key={link.label}
               >
                 <ScrollLink

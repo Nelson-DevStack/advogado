@@ -41,7 +41,10 @@ const ClientSection: React.FC<FComponent> = ({ id }) => {
   ];
 
   return (
-    <section className="w-full min-h-[50vh] py-24 bg-accentColor/30" id={id}>
+    <section
+      className="w-full  min-h-[50vh] flex py-24 bg-accentColor/30"
+      id={id}
+    >
       <Container>
         <div className="">
           <div className="flex flex-col items-center">
