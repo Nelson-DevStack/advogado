@@ -2,12 +2,13 @@ import Image from 'next/future/image';
 import React, { useEffect, useState } from 'react';
 
 import heroImg from '../../../public/lawyer.jpg';
+import { FComponent } from '../../types/FComponent';
 import Button from '../UI/Button';
 import Container from '../UI/Container';
 import Heading from '../UI/Heading';
 import Text from '../UI/Text';
 
-const Hero = () => {
+const Hero: React.FC<FComponent> = ({ id }) => {
   const [mousePosition, setMousePosition] = useState({
     x: 0,
     y: 0,
@@ -29,7 +30,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section>
+    <section id={id}>
       <Container className="grid lg:grid-cols-2 lg:items-center gap-10 min-h-[70vh] lg:justify-between py-10">
         <div>
           <div className="max-w-lg flex flex-col">
@@ -68,7 +69,7 @@ const Hero = () => {
               }}
             />
 
-            <div className="bg-yellow-300 w-full md:w-[calc(100%_-_30px)] h-full absolute -z-10 rounded-2xl top-4 left-2 md:left-8" />
+            <div className="bg-yellow-300/30 md:bg-yellow-300 w-full md:w-[calc(100%_-_30px)] h-full absolute -z-10 rounded-2xl top-4 left-2 md:left-8" />
           </div>
         </div>
       </Container>

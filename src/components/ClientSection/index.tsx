@@ -7,11 +7,12 @@ import microsoftLogo from '../../../public/logos/microsoft.svg';
 import sonyLogo from '../../../public/logos/sony.svg';
 import teslaLogo from '../../../public/logos/tesla.svg';
 import visaLogo from '../../../public/logos/visa.svg';
+import { FComponent } from '../../types/FComponent';
 import Container from '../UI/Container';
 import Subheading from '../UI/Subheading';
 import Text from '../UI/Text';
 
-const ClientSection = () => {
+const ClientSection: React.FC<FComponent> = ({ id }) => {
   const images = [
     {
       src: googleLogo,
@@ -40,7 +41,7 @@ const ClientSection = () => {
   ];
 
   return (
-    <section className="w-full min-h-[50vh] py-24 bg-accentColor/30">
+    <section className="w-full min-h-[50vh] py-24 bg-accentColor/30" id={id}>
       <Container>
         <div className="">
           <div className="flex flex-col items-center">

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { FaBalanceScale, FaBars } from 'react-icons/fa';
+import { Link as ScrollLink } from 'react-scroll';
 
 import Container from '../UI/Container';
 
@@ -9,6 +10,34 @@ const Navbar = () => {
   const handleClick = () => {
     setNavbarOpen(!navbarOpen);
   };
+  const navbarLinks = [
+    {
+      to: 'home',
+      label: 'Home',
+      duration: null,
+      offset: -90,
+    },
+    {
+      to: 'clientes',
+      label: 'Clientes',
+      duration: null,
+    },
+    {
+      to: 'sobre',
+      label: 'Sobre',
+      duration: null,
+    },
+    {
+      to: 'casos',
+      label: 'Casos',
+      duration: null,
+    },
+    {
+      to: 'contato',
+      label: 'Contato',
+      duration: null,
+    },
+  ];
 
   return (
     <header className="w-full h-20 sticky top-0 bg-white z-50 shadow-md">
@@ -36,21 +65,72 @@ const Navbar = () => {
             lg:static lg:min-h-fit lg:flex-row lg:p-0 lg:max-w-fit lg:shadow-none lg:border-none
             ${navbarOpen ? '!translate-x-0' : ''}`}
           >
-            <li>
+            {navbarLinks.map((link) => (
+              <li
+                className="text-base font-medium text-primaryGray font-text"
+                key={link.label}
+              >
+                <ScrollLink
+                  className="cursor-pointer"
+                  onClick={() => setNavbarOpen(false)}
+                  to={link.to}
+                  spy={true}
+                  smooth={true}
+                  duration={link.duration ? link.duration : 500}
+                  offset={link.offset ? link.offset : 0}
+                >
+                  {link.label}
+                </ScrollLink>
+              </li>
+            ))}
+            {/* <li className="text-base font-medium text-primaryGray font-text">
               <Link href={'/'}>Home</Link>
             </li>
-            <li>
-              <Link href={'/'}>Clientes</Link>
+
+            <li className="text-base font-medium text-primaryGray font-text">
+              <ScrollLink
+                className="cursor-pointer"
+                to={'clientes'}
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
+                Clientes
+              </ScrollLink>
             </li>
-            <li>
-              <Link href={'/'}>Sobre</Link>
+            <li className="text-base font-medium text-primaryGray font-text">
+              <ScrollLink
+                className="cursor-pointer"
+                to={'sobre'}
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
+                Sobre
+              </ScrollLink>
             </li>
-            <li>
-              <Link href={'/'}>Casos</Link>
+            <li className="text-base font-medium text-primaryGray font-text">
+              <ScrollLink
+                className="cursor-pointer"
+                to={'casos'}
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
+                Casos
+              </ScrollLink>
             </li>
-            <li>
-              <Link href={'/'}>Contato</Link>
-            </li>
+            <li className="text-base font-medium text-primaryGray font-text">
+              <ScrollLink
+                className="cursor-pointer"
+                to={'contato'}
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
+                Contato
+              </ScrollLink>
+            </li> */}
           </ul>
         </nav>
       </Container>

@@ -2,13 +2,14 @@ import Image from 'next/future/image';
 import React from 'react';
 
 import aboutImg from '../../../public/agreement.jpg';
+import { FComponent } from '../../types/FComponent';
 import Container from '../UI/Container';
 import Subheading from '../UI/Subheading';
 import Text from '../UI/Text';
 
-const SecondHero = () => {
+const SecondHero: React.FC<FComponent> = ({ id }) => {
   return (
-    <section className="py-24">
+    <section className="py-24" id={id}>
       <Container>
         <div className="grid gap-10 md:gap-14 md:grid-cols-2">
           <div>

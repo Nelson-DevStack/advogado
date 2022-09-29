@@ -21,11 +21,11 @@ const Home: NextPage = () => {
 
       <Navbar />
       <main>
-        <Hero />
-        <ClientSection />
-        <SecondHero />
-        <CasesSection />
-        <ContactSection />
+        <Hero id="home" />
+        <ClientSection id="clientes" />
+        <SecondHero id="sobre" />
+        <CasesSection id="casos" />
+        <ContactSection id="contato" />
         <Footer />
       </main>
     </>

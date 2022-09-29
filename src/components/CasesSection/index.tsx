@@ -4,11 +4,12 @@ import React from 'react';
 import enterpriseImg from '../../../public/enterprise.jpg';
 import financeImg from '../../../public/finance.jpg';
 import triburarioImg from '../../../public/tributario.jpg';
+import { FComponent } from '../../types/FComponent';
 import Container from '../UI/Container';
 import Subheading from '../UI/Subheading';
 import Text from '../UI/Text';
 
-const CasesSection = () => {
+const CasesSection: React.FC<FComponent> = ({ id }) => {
   const cardData = [
     {
       title: 'Direito Consumidor',
@@ -28,7 +29,7 @@ const CasesSection = () => {
   ];
 
   return (
-    <section className="py-24">
+    <section className="py-24" id={id}>
       <Container>
         <div>
           <div className="flex items-center justify-center mb-14">

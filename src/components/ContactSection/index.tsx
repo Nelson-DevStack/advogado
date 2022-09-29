@@ -2,14 +2,15 @@ import React from 'react';
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
 
+import { FComponent } from '../../types/FComponent';
 import Button from '../UI/Button';
 import Container from '../UI/Container';
 import Subheading from '../UI/Subheading';
 import Text from '../UI/Text';
 
-const ContactSection = () => {
+const ContactSection: React.FC<FComponent> = ({ id }) => {
   return (
-    <section className="py-24 w-full bg-accentColor/30">
+    <section className="py-24 w-full bg-accentColor/30" id={id}>
       <Container>
         <div>
           <Subheading>Entre em Contato</Subheading>
