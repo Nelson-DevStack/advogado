@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
+import { FaBalanceScale } from 'react-icons/fa';
 
 import Container from '../UI/Container';
 import Text from '../UI/Text';
@@ -33,7 +34,10 @@ const Footer = () => {
         <div className="mt-10 pt-8 border-t border-gray-400 flex flex-col md:flex-row md: justify-between lg:items-center gap-5">
           <span>
             <Link href="/" className="p-1">
-              Bruce Wayne
+              <span className="flex items-center gap-3 text-lg font-heading font-medium text-primaryGray">
+                <FaBalanceScale fontSize={22} />
+                Bruce Wayne
+              </span>
             </Link>
           </span>
 
