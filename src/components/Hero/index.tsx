@@ -47,7 +47,7 @@ const Hero: React.FC<FComponent> = ({ id }) => {
         transform: `translateY(-${progress * 35}vh)`,
       }}
     >
-      <Container className="grid lg:grid-cols-2 lg:items-center gap-10 min-h-[70vh] lg:justify-between py-10">
+      <Container className="grid lg:grid-cols-2 lg:items-center gap-10 min-h-[80vh] lg:justify-between py-10 lg:py-4">
         <div>
           <div className="max-w-lg flex flex-col">
             {/* Content Area */}
