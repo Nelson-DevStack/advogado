@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import Image from 'next/future/image';
 import React from 'react';
 
@@ -36,9 +37,21 @@ const CasesSection: React.FC<FComponent> = ({ id }) => {
             <Subheading className="text-center">Casos que trabalho</Subheading>
           </div>
 
-          <div className="flex flex-col md:flex-row gap-10 lg:gap-14">
+          <motion.div
+            // className="flex flex-col md:flex-row gap-10  lg:gap-14 transition duration-1000 transition-all"
+            className="flex flex-col md:flex-row transition transition-all"
+            transition={{
+              duration: 0.9,
+            }}
+            initial={{
+              gap: '15em',
+            }}
+            whileInView={{
+              gap: '2em',
+            }}
+          >
             {cardData.map((data) => (
-              <div
+              <motion.div
                 key={data.title}
                 className="px-4 md:px-0 lg:px-4 max-w-sm mx-auto flex flex-col items-center mb-10 md:mb-0"
               >
@@ -51,9 +64,9 @@ const CasesSection: React.FC<FComponent> = ({ id }) => {
                   {data.title}
                 </h3>
                 <Text className="text-center">{data.text}</Text>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </Container>
     </section>
