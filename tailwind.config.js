@@ -16,6 +16,9 @@ module.exports = {
         heading: 'Montserrat, sans-serif',
         text: 'Open Sans, sans-serif',
       },
+      backgroundImage: {
+        hero: 'url("/hero.jpg")',
+      },
     },
   },
   plugins: [],

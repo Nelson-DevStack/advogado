@@ -43,52 +43,56 @@ const Hero: React.FC<FComponent> = ({ id }) => {
     <section
       id={id}
       ref={refContainer}
-      style={{
-        transform: `translateY(-${progress * 35}vh)`,
-      }}
+      className="bg-hero bg-cover h-full -z-50 bg-fixed "
     >
-      <Container className="grid lg:grid-cols-2 lg:items-center gap-10 min-h-[80vh] lg:justify-between py-10 lg:py-4">
-        <div>
-          <div className="max-w-lg flex flex-col">
-            {/* Content Area */}
-            <Heading>
-              <span className="text-accentColor">Bruce Wayne</span>, advogado
-              especializado
-            </Heading>
-            <Text className="text-">
-              Com mais de 500 clientes satisfeitos, luto e advogo pelos seus
-              direitos
-            </Text>
-            <Button
-              isLink={false}
-              className={
-                'border border-accentColor text-accentColor hover:bg-accentColor hover:text-white transition duration-300 text-[1em] mt-4 max-w-fit'
-              }
-            >
-              Conheça-me
-            </Button>
+      <div className="backdrop-blur-sm">
+        <Container className="grid lg:grid-cols-2 lg:items-center gap-10 min-h-[80vh] lg:justify-between py-10 lg:py-4">
+          <div
+            style={{
+              transform: `translateY(-${progress * 35}vh)`,
+            }}
+          >
+            <div className="max-w-lg flex flex-col">
+              {/* Content Area */}
+              <Heading>
+                <span className="text-accentColor">Bruce Wayne</span>, advogado
+                especializado
+              </Heading>
+              <Text className="text-">
+                Com mais de 500 clientes satisfeitos, luto e advogo pelos seus
+                direitos
+              </Text>
+              <Button
+                isLink={false}
+                className={
+                  'border border-accentColor text-accentColor hover:bg-accentColor hover:text-white transition duration-300 text-[1em] mt-4 max-w-fit'
+                }
+              >
+                Conheça-me
+              </Button>
+            </div>
           </div>
-        </div>
-        <div className="flex flex-col items-center lg:items-end relative">
-          {/* Image Area */}
-          <div className="relative top-0">
-            <Image
-              src={heroImg}
-              className="
+          <div className="flex flex-col items-center lg:items-end relative">
+            {/* Image Area */}
+            <div className="relative top-0">
+              <Image
+                src={heroImg}
+                className="
                 w-full h-auto mx-auto lg:mr-4 rounded-2xl shadow-2xl max-w-sm
                 "
-              alt="Hero"
-              style={{
-                transform: `translate(${mousePosition.x / 850}em, ${
-                  mousePosition.y / 850
-                }em)`,
-              }}
-            />
+                alt="Hero"
+                style={{
+                  transform: `translate(${mousePosition.x / 850}em, ${
+                    mousePosition.y / 850
+                  }em)`,
+                }}
+              />
 
-            <div className="bg-yellow-300/30 md:bg-yellow-300 w-full md:w-[calc(100%_-_30px)] h-full absolute -z-10 rounded-2xl top-4 left-2 md:left-8" />
+              <div className="bg-yellow-300/30 md:bg-yellow-300 w-full md:w-[calc(100%_-_30px)] h-full absolute -z-10 rounded-2xl top-4 left-2 md:left-8" />
+            </div>
           </div>
-        </div>
-      </Container>
+        </Container>
+      </div>
     </section>
   );
 };
