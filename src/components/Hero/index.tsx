@@ -91,7 +91,7 @@ const Hero: React.FC<FComponent> = ({ id }) => {
                 }}
               />
 
-              <div className="bg-yellow-300/30 md:bg-yellow-300 w-full md:w-[calc(100%_-_30px)] h-full absolute -z-10 rounded-2xl top-4 left-2 md:left-8" />
+              <div className="bg-primaryGray/30 blur-sm md:bg-primaryGray/30 w-full md:w-[calc(100%_-_30px)] h-full absolute -z-10 rounded-2xl top-4 left-2 md:left-8" />
             </div>
           </div>
         </Container>
