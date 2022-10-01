@@ -6,7 +6,6 @@ import { FaHome } from 'react-icons/fa';
 
 import notfoundImg from '../assets/judge.png';
 import Navbar from '../components/Navbar';
-import Button from '../components/UI/Button';
 import Container from '../components/UI/Container';
 import Subheading from '../components/UI/Subheading';
 import Text from '../components/UI/Text';

@@ -9,7 +9,7 @@ import Footer from '../components/Footer';
 import Hero from '../components/Hero';
 import Navbar from '../components/Navbar';
 import SecondHero from '../components/SecondHero';
-import Welcome from '../components/Welcome';
+import SplashScreen from '../components/SplashScreen';
 
 const Home: NextPage = () => {
   const timeout = 3;
@@ -28,7 +28,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Welcome time={timeout} />
+      <SplashScreen time={timeout} />
       <Navbar />
 
       <main>

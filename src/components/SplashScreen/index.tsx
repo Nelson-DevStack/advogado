@@ -5,11 +5,11 @@ import { FaBalanceScale } from 'react-icons/fa';
 import Subheading from '../UI/Subheading';
 import Text from '../UI/Text';
 
-type WelcomeProps = {
+type SplashScreenProps = {
   time: number;
 };
 
-const Welcome: React.FC<WelcomeProps> = ({ time }) => {
+const SplashScreen: React.FC<SplashScreenProps> = ({ time }) => {
   const [timeExpired, setTimeExpired] = useState(false);
   const timeout = time;
 
@@ -50,7 +50,7 @@ const Welcome: React.FC<WelcomeProps> = ({ time }) => {
           opacity: 1,
         }}
       >
-        <div className="flex gap-4">
+        <div className="flex flex-col items-center md:flex-row gap-4">
           <FaBalanceScale fontSize={48} />
           <Subheading className="text-white text-5xl">Bruce Wayne</Subheading>
         </div>
@@ -60,4 +60,4 @@ const Welcome: React.FC<WelcomeProps> = ({ time }) => {
   );
 };
 
-export default Welcome;
+export default SplashScreen;
