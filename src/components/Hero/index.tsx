@@ -46,7 +46,7 @@ const Hero: React.FC<FComponent> = ({ id }) => {
       className="bg-hero bg-cover h-full -z-50 bg-fixed "
     >
       <div className="backdrop-blur-sm">
-        <Container className="grid lg:grid-cols-2 lg:items-center gap-10 min-h-[80vh] lg:justify-between py-10 lg:py-4">
+        <Container className="grid lg:grid-cols-2 lg:items-center gap-10 min-h-[85vh] lg:justify-between py-10 lg:py-4">
           <div
             style={{
               transform: `translateY(-${progress * 35}vh)`,

@@ -23,7 +23,7 @@ const Welcome: React.FC<WelcomeProps> = ({ time }) => {
 
   return (
     <motion.div
-      className="fixed h-screen w-screen w-full h-full mx-auto bg-[#111] z-[60] flex items-center justify-center"
+      className="fixed h-screen w-screen w-full h-full mx-auto bg-mainColor z-[60] flex items-center justify-center"
       style={{
         display: timeExpired ? 'none' : 'fixed',
       }}

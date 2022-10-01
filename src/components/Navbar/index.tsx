@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { FaBalanceScale, FaBars } from 'react-icons/fa';
@@ -40,12 +41,17 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="w-full h-20 sticky top-0 bg-white z-50 shadow-md">
+    <motion.header
+      className="w-full h-20 sticky top-0 z-50 shadow-md"
+      transition={{ duration: 2, delay: 3 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, backgroundColor: '#013d37', color: '#f6f6f6' }}
+    >
       <Container>
         <nav className="w-full h-full items-center flex justify-between">
           {/* <Link href={'/'}>Bruce Wayne</Link> */}
           <Link href="/" className="p-1">
-            <span className="flex items-center gap-3 text-lg font-heading font-medium text-primaryGray">
+            <span className="flex items-center gap-3 text-lg font-heading font-medium ">
               <FaBalanceScale fontSize={22} />
               Bruce Wayne
             </span>
@@ -60,14 +66,14 @@ const Navbar = () => {
           </button>
 
           <ul
-            className={`flex flex-col gap-8 fixed top-20 right-0 min-h-screen max-w-[85vw] w-full p-10 border bg-white translate-x-full transition duration-500 shadow-xl lg:translate-x-0
+            className={`flex flex-col gap-8 fixed top-20 right-0 min-h-screen max-w-[85vw] w-full p-10 border bg-transparent translate-x-full transition duration-500 lg:transition-none shadow-xl lg:translate-x-0
 
             lg:static lg:min-h-fit lg:flex-row lg:p-0 lg:max-w-fit lg:shadow-none lg:border-none
             ${navbarOpen ? '!translate-x-0' : ''}`}
           >
             {navbarLinks.map((link) => (
               <li
-                className="text-base font-semibold lg:font-medium text-primaryGray font-text"
+                className="text-base font-semibold lg:font-medium font-text"
                 key={link.label}
               >
                 <ScrollLink
@@ -83,58 +89,10 @@ const Navbar = () => {
                 </ScrollLink>
               </li>
             ))}
-            {/* <li className="text-base font-medium text-primaryGray font-text">
-              <Link href={'/'}>Home</Link>
-            </li>
-
-            <li className="text-base font-medium text-primaryGray font-text">
-              <ScrollLink
-                className="cursor-pointer"
-                to={'clientes'}
-                spy={true}
-                smooth={true}
-                duration={500}
-              >
-                Clientes
-              </ScrollLink>
-            </li>
-            <li className="text-base font-medium text-primaryGray font-text">
-              <ScrollLink
-                className="cursor-pointer"
-                to={'sobre'}
-                spy={true}
-                smooth={true}
-                duration={500}
-              >
-                Sobre
-              </ScrollLink>
-            </li>
-            <li className="text-base font-medium text-primaryGray font-text">
-              <ScrollLink
-                className="cursor-pointer"
-                to={'casos'}
-                spy={true}
-                smooth={true}
-                duration={500}
-              >
-                Casos
-              </ScrollLink>
-            </li>
-            <li className="text-base font-medium text-primaryGray font-text">
-              <ScrollLink
-                className="cursor-pointer"
-                to={'contato'}
-                spy={true}
-                smooth={true}
-                duration={500}
-              >
-                Contato
-              </ScrollLink>
-            </li> */}
           </ul>
         </nav>
       </Container>
-    </header>
+    </motion.header>
   );
 };
 

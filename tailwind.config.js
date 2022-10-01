@@ -10,6 +10,9 @@ module.exports = {
     extend: {
       colors: {
         primaryGray: '#1B2124',
+        mainColor: '#013d37',
+        secondaryColor: '#dfbf8d',
+        lightColor: '#f6f6f6',
         accentColor: '#FF9966',
       },
       fontFamily: {
