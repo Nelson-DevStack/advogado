@@ -29,6 +29,15 @@ const Footer = () => {
               <a>Tributário</a>
             </li>
           </ul>
+
+          <ul className="flex flex-col">
+            <span className="font-text font-semibold mb-2">Links</span>
+            <li className="flex flex-col gap-1.5">
+              <a href="https://icons8.com/illustrations/author/zD2oqC8lLBBA">
+                Ilustração de Icon8
+              </a>
+            </li>
+          </ul>
         </div>
 
         <div className="mt-10 pt-8 border-t border-gray-400 flex flex-col md:flex-row md: justify-between lg:items-center gap-5">
