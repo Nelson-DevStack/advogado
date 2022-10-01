@@ -49,6 +49,7 @@ const CasesSection: React.FC<FComponent> = ({ id }) => {
             whileInView={{
               gap: '2em',
             }}
+            viewport={{ once: true }}
           >
             {cardData.map((data) => (
               <motion.div
