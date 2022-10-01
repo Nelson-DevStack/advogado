@@ -13,11 +13,11 @@ const Footer = () => {
           <ul className="flex flex-col">
             <span className="font-text font-semibold mb-2">Página Inicial</span>
             <li className="flex flex-col gap-1.5">
-              <a>Home</a>
-              <a>Clientes</a>
-              <a>Sobre</a>
-              <a>Casos</a>
-              <a>Contato</a>
+              <a href="/">Home</a>
+              <a href="#clientes">Clientes</a>
+              <a href="#sobre">Sobre</a>
+              <a href="#casos">Casos</a>
+              <a href="#contato">Contato</a>
             </li>
           </ul>
 

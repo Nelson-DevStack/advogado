@@ -50,7 +50,7 @@ const ClientSection: React.FC<FComponent> = ({ id }) => {
 
   return (
     <section
-      className="w-full  min-h-[50vh] flex py-24 bg-accentColor/30"
+      className="w-full  min-h-[50vh] flex py-36 bg-accentColor/30"
       id={id}
       ref={refContainer}
     >

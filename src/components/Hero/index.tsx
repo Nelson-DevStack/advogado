@@ -1,5 +1,6 @@
 import Image from 'next/future/image';
 import React, { useContext, useEffect, useRef, useState } from 'react';
+import { Link } from 'react-scroll';
 
 import heroImg from '../../../public/lawyer.jpg';
 import { ScrollContext } from '../../contexts/scrollObserver';
@@ -62,14 +63,16 @@ const Hero: React.FC<FComponent> = ({ id }) => {
                 Com mais de 500 clientes satisfeitos, luto e advogo pelos seus
                 direitos
               </Text>
-              <Button
-                isLink={false}
-                className={
-                  'border border-accentColor text-accentColor hover:bg-accentColor hover:text-white transition duration-300 text-[1em] mt-4 max-w-fit'
-                }
-              >
-                Conheça-me
-              </Button>
+              <Link to="clientes" smooth spy duration={500}>
+                <Button
+                  isLink={false}
+                  className={
+                    'border border-accentColor text-accentColor hover:bg-accentColor hover:text-white transition duration-300 text-[1em] mt-4 max-w-fit'
+                  }
+                >
+                  Conheça-me
+                </Button>
+              </Link>
             </div>
           </div>
           <div className="flex flex-col items-center lg:items-end relative">
