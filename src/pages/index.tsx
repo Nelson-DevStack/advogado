@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import CasesSection from '../components/CasesSection';
 import ClientSection from '../components/ClientSection';
@@ -9,8 +9,17 @@ import Footer from '../components/Footer';
 import Hero from '../components/Hero';
 import Navbar from '../components/Navbar';
 import SecondHero from '../components/SecondHero';
+import Welcome from '../components/Welcome';
 
 const Home: NextPage = () => {
+  const timeout = 3;
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    setTimeout(() => {
+      document.body.style.overflow = 'visible';
+    }, (timeout - 1) * 1000);
+  }, []);
+
   return (
     <>
       <Head>
@@ -19,7 +28,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Welcome time={timeout} />
       <Navbar />
+
       <main>
         <Hero id="home" />
         <ClientSection id="clientes" />
