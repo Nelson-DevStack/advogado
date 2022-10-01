@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaBalanceScale, FaBars } from 'react-icons/fa';
 import { Link as ScrollLink } from 'react-scroll';
 
@@ -8,9 +8,26 @@ import Container from '../UI/Container';
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const [navbarColored, setNavbarColored] = useState(false);
   const handleClick = () => {
     setNavbarOpen(!navbarOpen);
   };
+
+  useEffect(() => {
+    const handleNavbarColored = () => {
+      if (window.scrollY >= 650) {
+        setNavbarColored(true);
+      } else {
+        setNavbarColored(false);
+      }
+    };
+    window.addEventListener('scroll', handleNavbarColored);
+
+    return () => {
+      window.removeEventListener('scroll', handleNavbarColored);
+    };
+  }, []);
+
   const navbarLinks = [
     {
       to: 'home',
@@ -42,10 +59,11 @@ const Navbar = () => {
 
   return (
     <motion.header
-      className="w-full h-20 sticky top-0 z-50 shadow-md"
-      transition={{ duration: 2, delay: 3 }}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1, backgroundColor: '#013d37', color: '#f6f6f6' }}
+      className={`w-full h-20 sticky top-0 z-50  transition duration-1000 ${
+        !navbarColored
+          ? 'bg-white text-primaryGray shadow-sm'
+          : 'bg-mainColor text-lightColor shadow-md'
+      }`}
     >
       <Container>
         <nav className="w-full h-full items-center flex justify-between">
