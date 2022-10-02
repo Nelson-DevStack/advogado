@@ -7,6 +7,7 @@ import Button from '../UI/Button';
 import Container from '../UI/Container';
 import Subheading from '../UI/Subheading';
 import Text from '../UI/Text';
+// ContactSection
 
 const ContactSection: React.FC<FComponent> = ({ id }) => {
   return (
