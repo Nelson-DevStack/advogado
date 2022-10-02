@@ -16,7 +16,7 @@ const NotFoundPage = () => {
   return (
     <>
       <Head>
-        <title>Bruce Wayne | Página não encontrada</title>
+        <title>Paulo Almeida | Página não encontrada</title>
       </Head>
 
       <Navbar />

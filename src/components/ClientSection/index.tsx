@@ -61,8 +61,8 @@ const ClientSection: React.FC<FComponent> = ({ id }) => {
               Conheça alguns dos meus clientes
             </Subheading>
             <Text className="text-center max-w-md">
-              O escritório de Bruce Wayne já ajudou grandes empresas e companias
-              a progredirem.
+              O escritório de Paulo Almeida já ajudou grandes empresas e
+              companias a progredirem.
             </Text>
           </div>
 

@@ -56,8 +56,8 @@ const Hero: React.FC<FComponent> = ({ id }) => {
             <div className="max-w-lg flex flex-col">
               {/* Content Area */}
               <Heading>
-                <span className="text-accentColor">Bruce Wayne</span>, advogado
-                especializado
+                <span className="text-accentColor">Paulo Almeida</span>,
+                advogado especializado
               </Heading>
               <Text className="text-">
                 Com mais de 500 clientes satisfeitos, luto e advogo pelos seus

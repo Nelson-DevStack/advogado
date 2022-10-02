@@ -52,7 +52,7 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ time }) => {
       >
         <div className="flex flex-col items-center md:flex-row gap-4">
           <FaBalanceScale fontSize={48} />
-          <Subheading className="text-white text-5xl">Bruce Wayne</Subheading>
+          <Subheading className="text-white text-5xl">Paulo Almeida</Subheading>
         </div>
         <Text className="text-white !text-xl">Advogado Especializado</Text>
       </motion.div>

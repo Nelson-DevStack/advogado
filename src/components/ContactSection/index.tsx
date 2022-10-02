@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FormEvent } from 'react';
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
 
@@ -18,7 +18,10 @@ const ContactSection: React.FC<FComponent> = ({ id }) => {
 
         <div className="grid lg:grid-cols-2 gap-16">
           <div>
-            <form className="max-w-md">
+            <form
+              className="max-w-md"
+              onSubmit={(event: FormEvent) => event.preventDefault()}
+            >
               <label className="text-lg flex flex-col gap-1 text-primaryGray my-2">
                 Nome Completo
                 <input
@@ -99,7 +102,7 @@ const ContactSection: React.FC<FComponent> = ({ id }) => {
               <span className="w-[50px] h-[50px] rounded-full flex items-center justify-center bg-accentColor text-2xl text-[#333] ">
                 <FaInstagram />
               </span>
-              @brucewayne
+              @paulo_advogado
             </a>
             <a
               href="https://youtube.com"
@@ -108,7 +111,7 @@ const ContactSection: React.FC<FComponent> = ({ id }) => {
               <span className="w-[50px] h-[50px] rounded-full flex items-center justify-center bg-accentColor text-2xl text-[#333]">
                 <FaFacebook />
               </span>
-              bruce_wayne
+              paulo_advogado
             </a>
             <a
               href="https://youtube.com"
@@ -117,7 +120,7 @@ const ContactSection: React.FC<FComponent> = ({ id }) => {
               <span className="w-[50px] h-[50px] rounded-full flex items-center justify-center bg-accentColor text-2xl text-[#333]">
                 <SiGmail />
               </span>
-              brucewayne@email.com
+              pauloalmeida@email.com
             </a>
           </div>
         </div>

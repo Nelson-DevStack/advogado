@@ -38,10 +38,9 @@ const CasesSection: React.FC<FComponent> = ({ id }) => {
           </div>
 
           <motion.div
-            // className="flex flex-col md:flex-row gap-10  lg:gap-14 transition duration-1000 transition-all"
             className="flex flex-col md:flex-row transition transition-all"
             transition={{
-              duration: 0.9,
+              duration: 0.8,
             }}
             initial={{
               gap: '15em',

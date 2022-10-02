@@ -67,7 +67,6 @@ const Navbar = () => {
     >
       <Container>
         <nav className="w-full h-full items-center flex justify-between">
-          {/* <Link href={'/'}>Bruce Wayne</Link> */}
           <Link href="/" className="p-1">
             <span className="flex items-center gap-3 text-lg font-heading font-medium cursor-pointer">
               <FaBalanceScale fontSize={22} />
@@ -76,7 +75,7 @@ const Navbar = () => {
                   navbarColored ? 'opacity-1 text-white' : 'opacity-0'
                 }`}
               >
-                Bruce Wayne
+                Paulo Almeida
               </span>
             </span>
           </Link>

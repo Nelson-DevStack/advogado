@@ -45,7 +45,7 @@ const Footer = () => {
             <Link href="/" className="p-1">
               <span className="flex items-center gap-3 text-lg font-heading font-medium text-primaryGray">
                 <FaBalanceScale fontSize={22} />
-                Bruce Wayne
+                Paulo Almeida
               </span>
             </Link>
           </span>
