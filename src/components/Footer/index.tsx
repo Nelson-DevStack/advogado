@@ -51,7 +51,7 @@ const Footer = () => {
           </span>
 
           <Text className="text-sm text-center lg:text-left">
-            Copyright Nelson Carvalho. Todos os direitos reservados. 2022
+            Desenvovido por Nelson Carvalho. Todos os direitos reservados. 2022
           </Text>
         </div>
       </Container>
