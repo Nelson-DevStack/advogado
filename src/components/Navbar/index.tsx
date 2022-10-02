@@ -90,10 +90,12 @@ const Navbar = () => {
           </button>
 
           <ul
-            className={`flex flex-col gap-8 fixed top-20 right-0 min-h-screen max-w-[85vw] w-full p-10 border bg-transparent translate-x-full transition duration-500 lg:transition-none shadow-xl lg:translate-x-0
+            className={`flex flex-col gap-8 fixed top-20 right-0 min-h-screen max-w-[85vw] w-full p-10 lg:bg-transparent translate-x-full transition duration-500 lg:transition-none shadow-xl lg:translate-x-0
 
             lg:static lg:min-h-fit lg:flex-row lg:p-0 lg:max-w-fit lg:shadow-none lg:border-none
-            ${navbarOpen ? '!translate-x-0' : ''}`}
+            ${navbarOpen ? '!translate-x-0 !text-primaryGray' : ''} ${
+              navbarColored ? 'bg-white text-lightColor' : 'bg-white'
+            }`}
           >
             {navbarLinks.map((link) => (
               <li
