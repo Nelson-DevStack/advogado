@@ -17,6 +17,7 @@ module.exports = {
       },
       fontFamily: {
         heading: 'Montserrat, sans-serif',
+        headingSerif: 'PT Serif, serif',
         text: 'Open Sans, sans-serif',
       },
       backgroundImage: {
