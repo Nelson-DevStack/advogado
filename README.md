@@ -19,6 +19,7 @@ O projeto encontra-se em constante desenvolvimentp e as próximas atualizações
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
 * Você instalou a versão estável ou a mais recente do `Node.js`
+* Possui o `Git` instalado na sua máquina
 
 ## 🚀 Instalando o projeto
 
